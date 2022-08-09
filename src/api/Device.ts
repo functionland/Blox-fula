@@ -2,7 +2,7 @@ import { Blox, Tower, Device } from "../../spec/DTOs";
 import * as Mock from "../mock"
 
 
-interface DeviceManager {
+interface DeviceAPI {
 
     getBlox(): Promise<Blox>
 
@@ -20,7 +20,7 @@ interface DeviceManager {
 
 }
 
-export const createDeviceManager = (): DeviceManager => {
+export const createDeviceAPI = (): DeviceAPI => {
     return {
         getBlox: (): Promise<Blox>=> Mock.mockPromise(Mock.blox) ,
         setBlox: (_: Partial<Blox>): Promise<boolean> => Mock.mockPromise(true),

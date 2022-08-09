@@ -1,6 +1,6 @@
 import { User, Friend } from "../../spec/interfaces";
 
-interface UserManager {
+interface UserAPI {
 
     getUser(): Promise<User>
 
